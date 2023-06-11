@@ -1,50 +1,52 @@
 import React from 'react'
 
-class GenresInDb extends React.Component {
+import userService from '../services/user'
+import UserList from './UserList'
+
+class UsersInDb extends React.Component {
     state = {
-        genres: [],
-        overTitle: false
+        user: [],
     }
 
-    componentDidMount() {
-        fetch('http://localhost:3001/api/genres')
-            .then(res => res.json())
-            .then(data => {
-                this.setState({ genres: data.data })
-            })
-            .catch(err => {
-                console.log(err)
-            })
+    async componentDidMount() {
+        const user = await userService.get()
+        console.log(user);
+        const { data } = user
+        console.log(data);
+        try {
+            this.setState({ user: data })
+        } catch (error) {
+            console.log(error)
+        }
     }
 
-    onTitleOver = () => {
-        this.setState({ overTitle: !this.state.overTitle })
-    }
 
     render() {
         return (
-            <div className="col-lg-6 mb-4">
-                <div className="card shadow mb-4">
-                    <div className="card-header py-3">
-                        <h5 className="m-0 font-weight-bold text-gray-800" onMouseOver={this.onTitleOver}>Genres in Data Base</h5>
-                    </div>
-                    <div className={`card-body ${this.state.overTitle ? 'bg-secondary' : ''}`}>
-                        <div className="row">
-                            {this.state.genres.map((genre, index) =>
-                                <div className="col-lg-6 mb-4" key={index}>
-                                    <div className="card bg-dark text-white shadow">
-                                        <div className="card-body">
-                                            {genre.name}
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
+            <div >
+                <h5>Usuarios existentes</h5>
+                <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Apellido</th>
+                            <th>Email</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {
+                            this.state.user.map((user, i) => {
+                                return <UserList  {...user} key={i} />
+                            })
+                        }
+
+                    </tbody>
+                </table>
             </div>
         )
     }
 }
 
-export default GenresInDb
+export default UsersInDb

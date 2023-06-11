@@ -7,6 +7,9 @@ import ContentRowMovies from './components/ContentRowMovies'
 import LastMovieInDb from './components/LastMovieInDb'
 import SearchMovies from './components/SearchMovies'
 
+
+import UserDetail from './components/UserDetail'
+
 import './App.css'
 
 function App() {
@@ -20,10 +23,16 @@ function App() {
 			{/* <!-- Content Wrapper --> */}
 			<Routes>
 				<Route path="/" element={<ContentWrapper />} />
+
+				<Route path="/usuario/:id" element={<UserDetail />} />
 				<Route path="/genres" element={<GenresInDb />} />
+
 				<Route path="/movies" element={<ContentRowMovies />} />
+
 				<Route path="/last-movie" element={<LastMovieInDb />} />
+
 				<Route path="/search" element={<SearchMovies prueba="esta es una propiedad de prueba" />} />
+
 				<Route path="*" element={<h1>Not Found</h1>} />
 			</Routes>
 			{/* <!-- End of Content Wrapper --> */}
