@@ -2,16 +2,21 @@ import React from 'react'
 import productService from '../services/products'
 import { Link } from 'react-router-dom'
 
-function ContentRowMovies() {
+import { useParams } from 'react-router-dom'
+
+function ContentProductDetail() {
     const [products, setProducts] = React.useState([])
+    
+    const {id} = useParams();
 
 
     React.useEffect(() => {
         async function getData() {
-            const productsResponse = await productService.get()
-            const lastProduct  = productsResponse.data[productsResponse.data.length - 1];
+            const productsResponse = await productService.getById(id)
+            const productDetail = productsResponse.data
+            console.log(productDetail);
 
-            setProducts(lastProduct)
+            setProducts(productDetail)
 
         }
         getData()
@@ -32,7 +37,7 @@ function ContentRowMovies() {
                     <p>Detalle del producto: {products.description}</p>
                     <p>Precio: ${products.price}</p>
                     {/* <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View product detail</a> */}
-                    <Link className="btn btn-danger"  rel="nofollow" to={`/product/${products.id}`}>Detail</Link>
+                    <Link className="btn btn-danger"  rel="nofollow" to={`/products/${products.id}`}>Detail</Link>
 
                 </div>
             </div>
@@ -40,4 +45,4 @@ function ContentRowMovies() {
     )
 }
 
-export default React.memo(ContentRowMovies)
+export default React.memo(ContentProductDetail)

@@ -8,7 +8,9 @@ import LastMovieInDb from './components/LastMovieInDb'
 import SearchMovies from './components/SearchMovies'
 
 
+import Movie from './components/Movie'
 import UserDetail from './components/UserDetail'
+import ProductDetail from './components/ProductDetail'
 
 import './App.css'
 
@@ -27,7 +29,9 @@ function App() {
 				<Route path="/usuario/:id" element={<UserDetail />} />
 				<Route path="/genres" element={<GenresInDb />} />
 
-				<Route path="/movies" element={<ContentRowMovies />} />
+
+				<Route path="/product/:id" element={<ProductDetail />} />
+				<Route path="/products" element={<Movie />} />
 
 				<Route path="/last-movie" element={<LastMovieInDb />} />
 

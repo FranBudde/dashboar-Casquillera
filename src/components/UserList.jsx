@@ -9,7 +9,7 @@ function UserList(props){
                 <td>{props.name}</td>
                 <td>{props.last_name}</td>
                 <td>{props.email}</td>
-                <td><Link to={`/usuario/${props.id}`} className='link-for-usuarios'>Ver</Link></td>
+                <td><Link to={`/usuario/${props.id}`} className='links'>Ver</Link></td>
             </tr>
         </React.Fragment>
     )

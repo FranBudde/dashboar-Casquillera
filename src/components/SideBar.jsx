@@ -7,7 +7,7 @@ function SideBar() {
 		<ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 			{/* <!-- Sidebar - Brand --> */}
-			<Link className="sidebar-brand d-flex align-items-center justify-content-center" style={{'margin-top':'15px'}} to="/">
+			<Link className="sidebar-brand d-flex align-items-center justify-content-center" style={{'marginTop':'15px'}} to="/">
 				<div className="sidebar-brand-icon">
 					<img className="w-100" src="/assets/images/logo.PNG" alt="Casquillera"/>
 				</div>
@@ -41,9 +41,9 @@ function SideBar() {
 
 			{/* <!-- Nav Item - Charts --> */}
 			<li className="nav-item">
-				<Link className="nav-link" to="/movies">
+				<Link className="nav-link" to="/products">
 					<i className="fas fa-fw fa-chart-area " style={{'color': 'black'}}></i>
-					<span className='siderBar-text'>Peliculas</span>
+					<span className='siderBar-text'>Productos</span>
 				</Link>
 			</li>
 
@@ -51,7 +51,7 @@ function SideBar() {
 			<li className="nav-item">
 				<Link className="nav-link" to="/last-movie">
 					<i className="fas fa-fw fa-table " style={{'color': 'black'}}></i>
-					<span className='siderBar-text'>Ultima Pelicula</span>
+					<span className='siderBar-text'>Ultimo Producto</span>
 				</Link>
 			</li>
 

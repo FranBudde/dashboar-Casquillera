@@ -14,9 +14,7 @@ function UserDetail() {
 
     const fetchData = async () => {
         const data = await userService.getById(id);
-        console.log(data);
         const user = data.data;
-        console.log(user.avatar);
         setUser(user);
     }
 

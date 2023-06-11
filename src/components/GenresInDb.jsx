@@ -10,9 +10,7 @@ class UsersInDb extends React.Component {
 
     async componentDidMount() {
         const user = await userService.get()
-        console.log(user);
         const { data } = user
-        console.log(data);
         try {
             this.setState({ user: data })
         } catch (error) {

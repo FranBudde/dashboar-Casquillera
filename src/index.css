@@ -4,10 +4,20 @@
   box-sizing: border-box;
 }
 
-.link-for-usuarios , .h1-casquillera{
+.links , .h1-casquillera{
   color: #fcad03 ;
 }
 
 .siderBar-text{
   color: black;
+}
+
+.img-last-product{
+  width: 30%;
+}
+
+#title_Navbar{
+  margin: auto;
+  color: white;
+  filter: drop-shadow(8px 1px 6px black);
 }
