@@ -18,11 +18,10 @@ function UserDetail() {
         setUser(user);
     }
 
-    // <img src={`http://localhost:3000/img/imageUsers/${user.avatar}`} alt="" />
 
     return (
-        <div>
-            <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
+        <div id="table-user-detail">
+            <table className="table table-bordered " id="dataTable" width="100%" cellSpacing="0">
                 <thead>
                     <tr>
                         <th>Avatar</th>

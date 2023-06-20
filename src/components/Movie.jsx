@@ -39,6 +39,7 @@ class Movie extends React.Component {
                                         <th>Descripcion</th>
                                         <th>Precio</th>
                                         <th>Descuento</th>
+                                        <th>Precio Final</th>
                                         <th>Detalle</th>
                                     </tr>
                                 </thead>

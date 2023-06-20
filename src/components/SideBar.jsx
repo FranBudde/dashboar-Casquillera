@@ -56,9 +56,16 @@ function SideBar() {
 			</li>
 
 			<li className="nav-item">
-				<Link className="nav-link" to="/search">
+				<Link className="nav-link" to="/search/products">
 					<i className="fas fa-search " style={{'color': 'black'}}></i>
-					<span className='siderBar-text'>Buscar</span>
+					<span className='siderBar-text'>Buscar Producto</span>
+				</Link>
+			</li>
+
+			<li className="nav-item">
+				<Link className="nav-link" to="/search/users">
+					<i className="fas fa-search " style={{'color': 'black'}}></i>
+					<span className='siderBar-text'>Buscar Usuario</span>
 				</Link>
 			</li>
 

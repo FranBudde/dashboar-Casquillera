@@ -1,3 +1,12 @@
 .siderBar-icons{
   color: black;
 }
+
+.neon-title{
+  color:#fff;
+/*La primera sobra será del color del texto. Las siguientes del color que queramos el brillo. Dejamos x e y a 0 y vamos aumentando la borrosidad.*/
+  text-shadow:0 0 10px #fff, 0 0 20px #fcad03, 0 0 30px     #fcad03, 0 0 40px #fcad03, 0 0 50px #fcad03, 0 0 60px     #fcad03, 0 0 70px #fcad03;
+  text-align: center;
+  font-size: 49px;
+}
+

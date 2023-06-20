@@ -11,6 +11,8 @@ import SearchMovies from './components/SearchMovies'
 import Movie from './components/Movie'
 import UserDetail from './components/UserDetail'
 import ProductDetail from './components/ProductDetail'
+import SearchUsers from './components/SearchUsers'
+ 
 
 import './App.css'
 
@@ -35,7 +37,9 @@ function App() {
 
 				<Route path="/last-movie" element={<LastMovieInDb />} />
 
-				<Route path="/search" element={<SearchMovies prueba="esta es una propiedad de prueba" />} />
+				<Route path="/search/products" element={<SearchMovies prueba="esta es una propiedad de prueba" />} />
+
+				<Route path="/search/users" element={<SearchUsers prueba="esta es una propiedad de prueba" />} />
 
 				<Route path="*" element={<h1>Not Found</h1>} />
 			</Routes>

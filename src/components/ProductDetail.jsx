@@ -35,9 +35,10 @@ function ContentProductDetail() {
                     </div>
                     <p>Nombre: {products.name}</p>
                     <p>Detalle del producto: {products.description}</p>
-                    <p>Precio: ${products.price}</p>
-                    {/* <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View product detail</a> */}
-                    <Link className="btn btn-danger"  rel="nofollow" to={`/products/${products.id}`}>Detail</Link>
+                    <p>Precio Original: ${products.price}</p>
+                    <p>Descuento: %{products.discount}</p>
+                    <p>Precio Final: ${ products.price - ((products.price * (products.discount / 100)))}</p>
+                    <Link className="btn btn-danger"  rel="nofollow" to="/">Home</Link>
 
                 </div>
             </div>

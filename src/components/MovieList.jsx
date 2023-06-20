@@ -10,6 +10,7 @@ function MovieList(props){
                 <td>{props.description}</td>
                 <td>${props.price}</td>
                 <td>% {props.discount}</td>
+                <td>${ props.price - ((props.price * (props.discount / 100)))}</td>
                 <td><Link to={`/product/${props.id}`} className='links'>Ver</Link></td>
             </tr>
         </React.Fragment>

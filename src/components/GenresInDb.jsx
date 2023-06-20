@@ -21,7 +21,7 @@ class UsersInDb extends React.Component {
 
     render() {
         return (
-            <div >
+            <div id='conteiner-users'>
                 <h5>Usuarios existentes</h5>
                 <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                     <thead>
