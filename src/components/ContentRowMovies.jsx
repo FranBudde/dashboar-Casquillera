@@ -14,23 +14,23 @@ function ContentRowMovies() {
             title: 'Total de productos',
             color: 'primary',
             quantity: 0,
-            icon: 'fa-film',
+            // icon: 'fa-film', cambiar el icono
             slug: 'products'
         },
         {
             title: 'Total de usuarios',
             color: 'warning',
             quantity: 0,
-            icon: 'fa-user',
+            // icon: 'fa-user', cambiar el icono
             slug: 'users'
         },
-        // {
-        //     title: 'Total de categorias',
-        //     color: 'success',
-        //     quantity: 0,
-        //     icon: 'fa-award',
-        //     slug: 'categories'
-        // }
+        {
+            title: 'Total de categorias',
+            color: 'success',
+            quantity: 0,
+            // icon: 'fa-award', cambiar el icono
+            slug: 'categories'
+        }
     ])
 
     React.useEffect(() => {
@@ -44,8 +44,11 @@ function ContentRowMovies() {
 
             setCards(values => {
                 return values.map(element => {
+                    const totalCategories = productsResponse.meta.categoryTotal
+
                     element.quantity = element.slug === 'products' ? productsResponse.meta.total : element.quantity
                     element.quantity = element.slug === 'users' ? usersResponse.meta.total : element.quantity
+                    element.quantity = element.slug === 'categories' ? totalCategories : element.quantity
                     return element
                 })
             })

@@ -32,17 +32,17 @@ SmallCard.propTypes = {
         PropTypes.string,
         PropTypes.number
     ]).isRequired,
-    icon: PropTypes.oneOf([
-        'fa-film',
-        'fa-award',
-        'fa-user'
-    ]).isRequired
+    // icon: PropTypes.oneOf([
+    //     'fa-film',
+    //     'fa-award',
+    //     'fa-user'
+    // ]).isRequired  --- Ponerle los iconos adecuados ---
 }
 
 SmallCard.defaultProps = {
     color: 'primary',
     quantity: 0,
-    icon: 'fa-film'
+    // icon: 'fa-film' cambiar el icono
 }
 
 export default React.memo(SmallCard)
